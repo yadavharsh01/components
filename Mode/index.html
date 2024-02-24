@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mode</title>
+    <style>
+      /* light dark mode */
+
+      #light {
+        background-color: #ffff;
+        color: #000;
+      }
+      #dark {
+        background-color: #000;
+        color: #ffff;
+      }
+      button {
+        margin: 20px;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 20px;
+        border-radius: 5px;
+        box-shadow: 2px 2px 2px #000;
+      }
+      p {
+        font-size: 20px;
+        margin: 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="light">Light Mode</button>
+    <p>
+      Hey Sorcerer <br />Lorem ipsum dolor sit amet consectetur, adipisicing
+      elit. Odit facere incidunt voluptatem culpa explicabo quo voluptas
+      tenetur? Aliquid fugit possimus maiores corporis quis autem dolorum ad
+      voluptatibus, laboriosam deserunt eius.s
+    </p>
+
+    <script>
+      const mode = document.getElementById("light");
+      const body = document.body;
+      mode.onclick = () => {
+        if (mode.innerHTML === "Light Mode") {
+          body.style.backgroundColor = "white";
+          body.style.color = "black";
+          mode.innerHTML = "Dark Mode";
+        } else if ((mode.innerHTML = "Dark Mode")) {
+          body.style.backgroundColor = "black";
+          body.style.color = "white";
+          mode.innerHTML = "Light Mode";
+        }
+      };
+    </script>
+  </body>
+</html>
